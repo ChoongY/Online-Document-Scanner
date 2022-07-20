@@ -4,7 +4,7 @@ import cv2
 from PIL import Image
 import Scanner
 import OCR
-import tryText
+import sendMail
 
 st.set_page_config(
      page_title="🖨Online Document Scanner",
@@ -71,7 +71,7 @@ elif selectbox == "Main application": # Application feature page
             print("{}".format(text), file=txtfile)
         emel=st.text_input("Please enter your email address")
         if st.button(label = "Send"):
-            tryText.sendEmail(emel)
+            sendMail.sendEmail(emel)
             st.write("Your file have been sent to the email you entered")
 
 
